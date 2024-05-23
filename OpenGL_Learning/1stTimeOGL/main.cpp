@@ -127,9 +127,6 @@ int main(int argc, char* argv[])
 
 	awsome.use(1);
 	daShader.setInt("texture2", 1);
-
-
-	GLint transformLoc = glGetUniformLocation(daShader.ID, "transform");
 	
 
 	// Boucle de rendu
@@ -142,7 +139,7 @@ int main(int argc, char* argv[])
 		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
 		transform = glm::scale(transform, glm::vec3(glm::abs(glm::sin((float)glfwGetTime()*10))));
 		transform = glm::translate(transform, glm::vec3(0.0f, 0.5f, 0.0f));
-		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+		daShader.setMat4("transform", transform);
 
 		// Rendu
 		glClear(GL_COLOR_BUFFER_BIT);
