@@ -20,6 +20,7 @@ Texture::Texture(const char* filePath)
         GLenum data_type;
         if (nrChannels == 4) data_type = GL_RGBA;
         else data_type = GL_RGB;
+        std::cout << "(+) Chargement de l'image \"" << filePath << "\" avec " << nrChannels << " canaux." << std::endl;
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, data_type, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
     }

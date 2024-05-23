@@ -32,12 +32,21 @@
     <ClCompile Include="texture.cpp">
       <Filter>Fichiers sources\utils</Filter>
     </ClCompile>
+    <ClCompile Include="fpsCounter.cpp">
+      <Filter>Fichiers sources\utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
       <Filter>Fichiers sources\utils</Filter>
     </ClInclude>
     <ClInclude Include="texture.h">
+      <Filter>Fichiers sources\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="fpsCounter.h">
+      <Filter>Fichiers sources\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
       <Filter>Fichiers sources\utils</Filter>
     </ClInclude>
   </ItemGroup>
